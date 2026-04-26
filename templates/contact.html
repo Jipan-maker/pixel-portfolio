@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+        <section id="contact" class="contact-section" style="text-align: center; margin-top: 20px;">
+            <div class="nes-container with-title is-centered retro-shadow" style="max-width: 600px; margin: 0 auto 50px; text-align: left;">
+                <p class="title">Connect With Me</p>
+
+                {% if notifikasi %}
+                <div class="nes-balloon from-left is-success" style="margin-bottom: 20px;">
+                    <p style="font-size: 12px;">{{ notifikasi }}</p>
+                </div>
+                {% endif %}
+
+                <form method="POST" action="/#contact">
+                    <div class="nes-field" style="margin-bottom: 15px;">
+                        <label for="name_field" style="font-size: 12px;">Name Player</label>
+                        <input type="text" id="name_field" name="nama_pengirim" class="nes-input" required>
+                    </div>
+                    <div class="nes-field" style="margin-bottom: 15px;">
+                        <label for="textarea_field" style="font-size: 12px;">Message</label>
+                        <textarea id="textarea_field" name="pesan_pengirim" class="nes-textarea" required></textarea>
+                    </div>
+                    <button type="submit" class="nes-btn is-primary">Send Message</button>
+                </form>
+            </div>
+
+            <p>Connect With Me</p>
+            <div style="display: flex; justify-content: center; align-items: center; gap: 15px; margin-top: 15px;">
+                <span style="position: relative; top: -20px;">Find me on GitHub or send me an email!</span>
+            </div>
+            <div style="display: flex; justify-content: center; align-items: flex-start; gap: 20px; margin-top: 20px; flex-wrap: wrap;">
+                <a href="https://github.com/Jipan-maker" target="_blank" class="contact-item">
+                    <i class="nes-icon github is-medium"></i>
+                    <p class="contact-label">Jipan-maker</p>
+                </a>
+                <a href="mailto:email-panjipramudiabagas@gmail.com" class="contact-item">
+                    <i class="nes-icon gmail is-medium"></i>
+                    <p class="contact-label">panjipramudiabagas<br>@gmail.com</p>
+                </a>
+                <a href="https://www.whatsapp.com/send?phone=083837007598" target="_blank" class="contact-item">
+                    <i class="nes-icon whatsapp is-medium"></i>
+                    <p class="contact-label">WA Me</p>
+                </a>
+            </div>
+        </section>
+{% endblock %}

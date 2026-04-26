@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section id="home" class="status-section" style="padding-top: 80px;">
+        <header class="game-header">
+            <h1><i class="nes-icon coin is-large"></i> WELCOME <i class="nes-icon coin is-large"></i></h1>
+            <p class="typing-text">Player 1 has entered the game.</p>
+        </header>
+
+            <div class="nes-container with-title is-centered retro-shadow">
+                <p class="title">Portofolio Saya </p>
+
+                <div class="info character-header">
+                        <img src="{{ url_for('static', filename='avatar.png') }}" alt="Panji Avatar" class="avatar-pixel">
+
+                        <div class="identity-text centered-identity">
+                            <p>Name : {{ data.nama }}</p>
+                            <p>NIM : {{ data.nim }}</p>
+                            <p>Class : {{ data.kelas }}</p>
+                            <p>Level : {{ data.level }}</p>
+                        </div>
+                </div>
+            </div>
+        </section>
+{% endblock %}

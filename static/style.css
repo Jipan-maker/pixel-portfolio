@@ -1,0 +1,211 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    padding: 0 20px;
+    background-color: #212529;
+    color: white;
+    cursor: url('https://unpkg.com/nes.css/assets/cursor.png'), auto;
+}
+
+.pixel-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(33, 37, 41, 0.95);
+    padding: 15px 0;
+    text-align: center;
+    z-index: 1000;
+    border-bottom: 4px solid white;
+}
+
+.pixel-nav a {
+    transition: all 0.2s ease-in-out;
+}
+
+.pixel-nav a:hover {
+    transform: scale(1.1) translateY(-3px);
+    box-shadow: 0 4px 15px rgba(253, 218, 36, 0.6);
+    z-index: 10;
+}
+
+.retro-monitor {
+    background-color: #000000;
+    border: 10px solid #d3d3d3;
+    border-radius: 5px;
+    padding: 5px;
+    color: #33ff00;
+    box-shadow: inset 0 0 18px rgba(51, 255, 0, 0.3), 10px 10px 0px 0px #000000;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.retro-monitor::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30%;
+    height: 10px;
+    background-color: #d3d3d3;
+    border: 4px solid #000000;
+    box-shadow: 10px 10px 0px 0px #000000;
+}
+
+.float-anim {
+    animation: float 3s ease-in-out infinite;
+}
+
+.status-section {
+    max-width: 650px;
+    margin: 0 auto 60px;
+    padding-top: 60px;
+}
+
+.nes-container {
+    background-color: #ffffff !important;
+    color: #212529 !important;
+}
+
+.nes-container.is-dark {
+    background-color: #212529 !important;
+    color: #ffffff !important;
+    border-color: #ffffff;
+}
+
+.nes-container.is-dark .title {
+    background-color: #212529;
+    color: #ffffff !important;
+}
+
+.retro-shadow {
+    box-shadow: 10px 10px 0px 0px #000000;
+}
+
+.game-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.typing-text {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    border-right: 3px solid white;
+    width: fit-content;
+    animation: typing 3s steps(35, end) blink-caret .75s step-end infinite;
+}
+
+@keyframes typing { from { width: 0 } to { width: 100% } }
+@keyframes blink-caret { from, to { border-color: transparent } 50% { border-color: white; } }
+
+.character-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.avatar-pixel {
+    border: 4px solid #212529;
+    width: 128px;
+    height: 128px;
+    image-rendering: pixelated;
+    margin-bottom: 20px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%{ transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.identity-text.centered-identity {
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.identity-text.centered-identity p {
+    margin: 5px 0;
+}
+
+.contact-item {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.contact-label {
+    font-size: 10px;
+    color: white;
+    position: absolute;
+    top: 100%;
+    margin-top: 15px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover .contact-label {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.contact-item:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 0 10px;
+    }
+
+    .pixel-nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px 5px;
+    }
+
+    .pixel-nav a {
+        margin: 5px;
+        font-size: 10px;
+    }
+
+    .game-header h1 {
+        font-size: 1.5em;
+    }
+
+    .typing-text {
+        font-size: 10px;
+    }
+
+    .responsive-row {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 20px !important;
+    }
+
+    .responsive-row > div {
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .retro-monitor {
+        padding: 5px;
+    }
+}

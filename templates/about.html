@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section id="about" class="status-section">
+
+    <div class="retro-monitor">
+
+        <p style="font-size: 14px; text-align: center; border-bottom: 2px dashed #33ff00; padding-bottom: 10px; margin-top: 0;">
+            >_ SYSTEM.INFO // LORE
+        </p>
+
+        <p style="font-size: 11px; line-height: 2.2; margin-top: 20px;">
+            {{ data.about }}
+        </p>
+
+        <p class="typing-text" style="color: #33ff00; border-right-color: #33ff00; margin-top: 30px; font-size: 10px;">
+            > C:\Users\Panji> _
+        </p>
+    </div>
+
+    <div class="responsive-row" style="display: flex; justify-content: space-between; gap: 20px; margin-top: 40px;">
+
+        <div class="nes-container is-dark with-title retro-shadow float-anim" style="flex: 1;">
+            <p class="title">Current Goal</p>
+            <p style="font-size: 10px; line-height: 1.6;">Sistem "Smart Farming" untuk agrikultur menggunakan Computer Vision.</p>
+        </div>
+
+        <div class="nes-container is-dark with-title retro-shadow float-anim" style="flex: 1; animation-delay: 1.5s;">
+            <p class="title">Hardware</p>
+            <p style="font-size: 10px; line-height: 1.6;"><i class="nes-icon is-small star"></i> Lenovo ThinkPad T480</p>
+        </div>
+
+    </div>
+
+    <div style="text-align: center; margin-top: 50px;">
+        <a href="{{ url_for('home') }}" class="nes-btn is-normal"> < Kembali ke Menu Utama</a>
+    </div>
+
+</section>
+{% endblock %}

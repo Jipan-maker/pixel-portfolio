@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section id="skills" class="status-section">
+    
+    <div class="nes-container with-title is-centered retro-shadow">
+        <p class="title">Skills</p>
+        
+        <div class="skills-bar" style="margin-top: 30px; text-align: left;">
+            {% for skill in data.skills %}
+                <span>{{ skill.nama }}: </span>
+                <progress class="nes-progress {{ skill.warna }}" value="{{ skill.nilai }}" max="100"></progress>
+                <br><br>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="nes-container is-dark with-title is-centered retro-shadow" style="margin-top: 40px;">
+        <p class="title">Active Quests (Project)</p>
+        
+        <ul class="nes-list is-disc" style="text-align: left; padding-left: 20px;">
+            {% for quest in data.quests %}
+                <li>
+                    {{ quest.nama }} <br>
+                    <a href="{{ quest.link }}" target="_blank" class="nes-btn {{ quest.btn }} is-small" style="margin-top: 15px; margin-bottom: 15px;">{{ quest.teks_btn }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div style="text-align: center; margin-top: 50px;">
+        <a href="{{ url_for('home') }}" class="nes-btn is-normal"> < Kembali ke Menu Utama</a>
+    </div>
+
+</section>
+{% endblock %}
