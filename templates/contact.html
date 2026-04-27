@@ -9,8 +9,12 @@
                 <div class="nes-balloon from-left is-success" style="margin-bottom: 20px;">
                     <p style="font-size: 12px;">{{ notifikasi }}</p>
                 </div>
-                {% endif %}
 
+                <div style="margin-top: 30px;">
+                    <a href="/contact" class="nes-btn">Send Another Message</a>
+                </div>
+
+                {% else %}
                 <form method="POST" action="">
                     <div class="nes-field" style="margin-bottom: 15px;">
                         <label for="name_field" style="font-size: 12px;">Name Player</label>
@@ -22,6 +26,7 @@
                     </div>
                     <button type="submit" class="nes-btn is-primary">Send Message</button>
                 </form>
+                {% endif %}
             </div>
 
             <p>Connect With Me</p>
