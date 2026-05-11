@@ -31,8 +31,8 @@ portfolio_data = {
         }
     ],
     "quests":[
-        {"nama": "Smart To-Do List (Java Swing)", "link": "https://github.com/Jipan-maker", "btn": "is-primary", "teks_btn": "View on GitHub"},
-        {"nama": "EcoEarth (Python Flask)", "link": "https://github.com/Jipan-maker", "btn": "is-success", "teks_btn": "View on GitHub"}
+        {"nama": "Smart To-Do List (Java Swing)", "link": "https://github.com/Jipan-maker", "btn": "is-primary", "teks_btn": "View on GitHub", "gambar": "SmarthToDoList.png"},
+        {"nama": "EcoEarth (Python Flask)", "link": "https://github.com/Jipan-maker", "btn": "is-success", "teks_btn": "View on GitHub", "gambar": "EcoEarth.png"}
     ]
 }
 

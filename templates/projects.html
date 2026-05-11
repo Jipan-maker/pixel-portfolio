@@ -20,10 +20,21 @@
         
         <ul class="nes-list is-disc" style="text-align: left; padding-left: 20px;">
             {% for quest in data.quests %}
-                <li>
-                    {{ quest.nama }} <br>
-                    <a href="{{ quest.link }}" target="_blank" class="nes-btn {{ quest.btn }} is-small" style="margin-top: 15px; margin-bottom: 15px;">{{ quest.teks_btn }}</a>
-                </li>
+                <div class="nes-container is-dark with-title retro-shadow" style="margin-bottom: 40px; padding: 20px;">
+            <p class="title">{{ quest.nama }}</p>
+            
+            <div style="border: 4px solid white; margin-bottom: 20px; overflow: hidden; background-color: #000;">
+                <img src="{{ url_for('static', filename=quest.gambar) }}"
+                    alt="{{ quest.nama }}"
+                    style="width: 100%; display: block; image-rendering: pixelated;">
+            </div>
+
+            <div style="text-align: center;">
+                <a href="{{ quest.link }}" target="_blank" class="nes-btn {{ quest.btn }} is-small">
+                    {{ quest.teks_btn }}
+                </a>
+            </div>
+        </div>
             {% endfor %}
         </ul>
     </div>
